@@ -3,7 +3,12 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {},
+    "paths": {
+      "@appModule/*": ["src/app/*"],
+      "@layoutModule/*": ["src/modules/layout/*"],
+      "@sharedComponents/*": ["src/modules/shared-components/*"],
+      "@authModule/*": ["src/modules/auth/*"]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
