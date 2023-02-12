@@ -1,4 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "./scss/bootstrap/bootstrap.scss";
+@import "./scss/variables";
+.layout-component {
+  background: -moz-linear-gradient(360deg, $light-color 65%, $main-color 65%);
+  background: -webkit-linear-gradient(
+    360deg,
+    $light-color 65%,
+    $main-color 65%
+  );
+  background: linear-gradient(360deg, $light-color 65%, $main-color 65%);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 35%;
+    background-image: url("./assets/images/header-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    opacity: 0.5;
+  }
+}
